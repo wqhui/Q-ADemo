@@ -1,0 +1,3 @@
+一。用npm install 可以下载安装package.json中的模块。运行时如果一直在map to regist,可以尝试换镜像。
+二。npm run server 可以开户站点。
+三
