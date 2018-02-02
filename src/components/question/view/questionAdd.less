@@ -1,0 +1,94 @@
+/*QuestionAdd*/
+
+@displayFlex:{
+	display: flex;
+};
+
+.add-question-box{
+	/*padding: 0 10%;*/
+/*	position: absolute;
+	left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 999;*/
+    width: 100%;   
+
+}
+.add-tool{
+	right:10%;
+	top:62px;
+	justify-content: flex-end;
+	.show-btn{
+		background-color: #5BB85B;
+	    color: #FFFFFF;
+	    height: 30px;
+	    line-height: 30px;
+	    width: 70px;
+	    text-align: center;
+	    transition:width 0.5s;
+	}
+	a:hover{
+		font-size: 100%;
+	}
+}	
+
+
+.question-add-parent{
+	position: absolute;
+	left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 999;
+    background-color: rgba(0,0,0,0.2);
+}
+.question-add-area{
+	padding:20px;
+	position: relative;
+	z-index: 1000;
+    width: 50%;
+    background-color: #f5f5f5;
+    left: 25%;
+    top: 50%;
+    transform: translateY(-50%);
+    form{
+		padding: 20px;
+	}
+	.new-substance{
+		box-sizing: border-box;
+	 	-webkit-box-sizing: border-box;
+	 	-moz-box-sizing: border-box;	
+	}
+}
+
+.add-title{
+	margin-bottom: 10px;
+	.new-title{
+		height: 30px;
+		box-sizing: border-box;
+	 	-webkit-box-sizing: border-box;
+	 	-moz-box-sizing: border-box;
+	}
+}
+
+
+.add-tools{
+	@displayFlex();
+	justify-content: flex-end;
+	.cancel-btn,.add-btn{
+		margin: 10px 5px;
+		width: 65px;
+		height: 35px;
+	}
+	.cancel-btn{
+		background-color: #FFFFFF;
+	}
+	.add-btn{
+		background-color: #5BB85B;
+	    color: #FFFFFF;
+	}
+}
+
+
+

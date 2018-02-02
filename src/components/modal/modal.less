@@ -1,0 +1,66 @@
+/*header*/
+@displayFlex:{
+	display: flex;
+};
+
+// .border(@width:1px,@style:solid,@color:#000,@type:bottom){
+// 	when(@type==11){
+// 		border-top:@width @style @color;
+// 	}
+//    	when(@type="bottom"){
+// 		border-bottom:@width @style @color;
+// 	}
+// }
+
+// .myBorder(@width:1px,@style:soild,@color:#eee,@type:bottom) when (@type=top){
+//         border-top:@width @style @color;
+// }
+
+
+.modal-area{
+	@displayFlex();
+	position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+	.modal-box{
+		@displayFlex();
+		background-color: #FFF;
+		min-width: 280px;
+		max-width: 450px;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		.modal-head{
+			width: 92%;
+			padding: 0 4%;
+			height: 50px;
+			line-height: 50px;
+			@displayFlex();
+			align-items: center;
+			justify-content: space-between;	
+			border-bottom:1px solid #eee;
+		}
+		.modal-content{
+			width: 86%;
+			padding: 20px 8%;
+		}
+		.modal-tool{
+			border-top:1px solid #eee;
+			width: 100%;
+			@displayFlex();
+			.btn-item{
+				width: 50%;
+				text-align: center;
+				height: 50px;
+				line-height: 50px;
+			}
+		}
+	}
+}
+

@@ -1,0 +1,31 @@
+/*header*/
+@displayFlex:{
+	display: flex;
+};
+.fail-area{
+	padding:0 10%;
+	margin-top: 10%;
+	.fail-box{
+		@displayFlex();
+		flex-direction: column;		
+		.fail-tip{
+			padding:20px 10px;
+			background-color: #f2dede;	
+		}
+		.fail-back{
+			@displayFlex();
+			justify-content: center;
+			margin-top: 20px;
+			.back-btn{
+				width: 20%;
+				text-align: center;
+				background-color: #5BB85B;
+				color: #FFFFFF;
+				padding:15px 0;
+				max-width:200px;
+				min-width: 100px; 
+			}
+		}	
+	}
+
+}

@@ -1,0 +1,104 @@
+
+@displayFlex:{
+	display: flex;
+};
+
+body{
+	margin: 0
+}
+a{
+	color:#000000;
+	text-decoration:none
+}
+a:hover{
+	color: #5BB85B;
+}
+input,textarea{
+	padding:5px;
+}
+.display-none{
+	display: none;
+}	
+.display-block{
+	display: block;
+}
+.width100{
+	width: 100%;
+}
+.fa-mrgr{
+	margin-right: 5px
+}
+
+.dot{
+	padding:0 10px;
+	color: #888888;
+}
+.btn{
+	padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 80%;
+}	
+.color82CCB0{
+	color: #82CCB0;
+}
+.pdr5px{
+	padding-right: 5px;
+}
+.question-upvote{
+	margin-bottom: 3px;
+}
+.question-upvote:hover{
+	color:#5BB85B; 
+}
+.question-downvote:hover{
+	color: #CC0000;
+}
+.upvote-item{
+    display: flex;
+    width: 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px double #eeeeee;
+    border-radius: 5px;
+/*    padding:5px 0;*/
+    margin-right:15px;
+}
+
+.header-down-tool{
+	position: fixed;
+	z-index: 888;
+	@displayFlex();
+
+}
+
+.upMoveSAnimation{
+	animation: upMove 0.5s;
+}
+@keyframes upMove
+{	
+	from {margin-top:20px;}
+	to {margin-top:0px;}
+}
+
+
+
+.fadeIn{
+	animation: fadeIn 0.5s;
+
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0; 
+	}
+	25%{
+		opacity: 0.25; 
+	}
+	50% {
+		opacity: 0.5; 
+	}
+	100% {
+		opacity: 1; 
+	}
+}
+
