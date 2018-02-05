@@ -9,7 +9,7 @@ const Breadcrumb=()=>{
 	return(
         <div className={styles["breadcrumb"]}>                                      
             <Link className={classnames(styles["back-btn"],styles["breadcrumb-item"],styles["active"])} to={{
-                  pathname: '/',
+                  pathname: '/home',
                   reload: true
                 }}>
                 问题列表

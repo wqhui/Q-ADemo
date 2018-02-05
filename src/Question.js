@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {List,Map,fromJS,is} from 'immutable';
-import { BrowserRouter,Route,Link } from 'react-router-dom';
+import { BrowserRouter,Route,Redirect } from 'react-router-dom';
 
 import Header from './components/public/Header.js';
 import Home from './page/Home.js';
@@ -28,11 +28,16 @@ class Question extends React.Component{
            <div>
               <Header></Header>  
               
-                  <BrowserRouter >
+                  <BrowserRouter>
                     <div>
-                        <Route exact  path="/" render={()=>                  
-                          <Home dispatch={dispatch} getState={getState} questionList={value.question}></Home>
+
+                        <Route exact  path="/" render={()=>   
+                          <Redirect to="/home"/>               
+                          // <Home dispatch={dispatch} getState={getState} questionList={value.question}></Home>
                         }/>
+                        <Route path="/home" render={()=>                  
+                          <Home dispatch={dispatch} getState={getState} questionList={value.question}></Home>
+                        }/>                         
                         <Route path="/detail" render={(props)=>{
                           return  (<Detail pid={props.location.id} 
                                       questionList={value.question}  dispatch={dispatch} 

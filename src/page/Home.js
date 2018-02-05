@@ -18,24 +18,5 @@ const Home=(props)=>{
 	 )
 }  
 
-// const mapStateToProps = (state) => {  
-//   return {
-//     questionList:state.question
-//   };
-// }
-
-// const mapDispatchToProps=(dispatch)=>{
-//     return {
-//         changeQuestionUpvote: (id,newUpvote) => {
-//             dispatch(changeQuestionUpvote(id,newUpvote));       
-//         },
-//         addQuestion: (title,substance) => {
-//           dispatch(addQuestion(title,substance));
-//         }        
-//     }
-// }
-
-// export default connect(mapStateToProps,mapDispatchToProps)(Home);
-
 
 export default Home;
