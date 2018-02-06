@@ -60,11 +60,7 @@ class AnswerItem extends React.Component {
     }
 
     render(){
-        return(
-            <div>
-                {this.renderPanel()}  
-            </div>
-        )
+        return this.renderPanel()
     }
 
 }

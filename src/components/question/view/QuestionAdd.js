@@ -103,7 +103,7 @@ class QuestionAdd extends React.Component {
     		displayStatus=mainStyles["display-block"]
     	}
 		return(
-			<div>
+			<div className={styles["add-question-box"]}>
 				<div className={classnames(mainStyles["header-down-tool"],styles["add-tool"])}>
 					<a href="javascript:;" className={classnames(mainStyles["btn"],styles["show-btn"])} onClick={this.showAddQuestion}>添加问题</a>
 				</div>
@@ -138,11 +138,7 @@ class QuestionAdd extends React.Component {
 
 
     render() {
-        return (
-            <div className={styles["add-question-box"]}>
-            	{this.renderPanel()}
-            </div>
-        )
+        return  this.renderPanel()
     }
 }
 

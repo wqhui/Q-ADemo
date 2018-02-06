@@ -71,12 +71,8 @@ class Detail extends React.Component{
     }
 
     render(){
-    return(         
-            <div>
-                {this.renderPanel()}
-            </div>            
-        )
-}
+        return this.renderPanel();
+    }
 }
 
 export default Detail;

@@ -4,6 +4,7 @@
   "description": "test",
   "main": "index.js",
   "dependencies": {
+    "bundle-loader": "^0.5.5",
     "classnames": "^2.2.5",
     "file-loader": "^1.1.6",
     "font-awesome": "^4.7.0",

@@ -72,16 +72,15 @@ input,textarea{
 
 }
 
-.upMoveSAnimation{
-	animation: upMove 0.5s;
-}
-@keyframes upMove
-{	
-	from {margin-top:20px;}
-	to {margin-top:0px;}
+:global(.fadeInc-enter),:global(.fadeInc-appear) {
+  	opacity: 0.01;
 }
 
-
+:global(.fadeInc-enter.fadeInc-enter-active),
+:global(.fadeInc-appear.fadeInc-appear-active) {
+ 	opacity: 1;
+  	transition:opacity 300ms linear;
+}
 
 .fadeIn{
 	animation: fadeIn 0.5s;

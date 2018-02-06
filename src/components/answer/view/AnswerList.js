@@ -61,11 +61,7 @@ class AnswerList extends React.Component{
 
 
 	render(){
-		return(	
-			<div>
-            	{this.renderPanel()}
-            </div>					
-		)
+		return this.renderPanel() 				
 	}
 }
 

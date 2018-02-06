@@ -1,12 +1,13 @@
-import React from 'react';
+import React,{Fragment}  from 'react';
 import {connect} from 'react-redux';
 
 import {List,Map,fromJS,is} from 'immutable';
 import { BrowserRouter,Route,Redirect } from 'react-router-dom';
 
+import lazyLoad from './lazyLoad';
 import Header from './components/public/Header.js';
-import Home from './page/Home.js';
-import Detail from './page/Detail.js';
+import Home from './page/Home.bundle';
+import Detail from './page/Detail.bundle';
 
 class Question extends React.Component{ 
 
@@ -25,28 +26,36 @@ class Question extends React.Component{
   render(){
     const {dispatch,getState,value}=this.props;
     return(
-           <div>
+           <Fragment>
               <Header></Header>  
               
                   <BrowserRouter>
-                    <div>
+                    <Fragment>
 
                         <Route exact  path="/" render={()=>   
                           <Redirect to="/home"/>               
                           // <Home dispatch={dispatch} getState={getState} questionList={value.question}></Home>
                         }/>
-                        <Route path="/home" render={()=>                  
-                          <Home dispatch={dispatch} getState={getState} questionList={value.question}></Home>
-                        }/>                         
+                        <Route path="/home" render={()=>{
+                          return lazyLoad(Home, {
+                              dispatch:dispatch,
+                              getState:getState,
+                              questionList:value.question
+                            }
+                          );
+                        }}/>                         
                         <Route path="/detail" render={(props)=>{
-                          return  (<Detail pid={props.location.id} 
-                                      questionList={value.question}  dispatch={dispatch} 
-                                      answer={value.answer}
-                                />  )
+                          return lazyLoad(Detail, {
+                                      pid:props.location.id,
+                                      questionList:value.question,
+                                      dispatch:dispatch,
+                                      answer:value.answer
+                                  }
+                                );
                         }}/>
-                    </div>
+                    </Fragment>
                   </BrowserRouter>          
-          </div>
+          </Fragment>
     )
   }
 }

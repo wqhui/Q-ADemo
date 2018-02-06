@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{Fragment} from 'react';
 
 import {Map,is} from 'immutable';
 
@@ -37,7 +37,7 @@ const handle=eventBus.sub("ansToQue","updateTime",(data)=>{
 const QuestionDetail=(props)=>{
 	const {questionDetail,dispatch} = props;
 	return(
-		<div className={styles["question-detail"]}>
+		<Fragment>
 			<div className={styles["question-header"]}>
 				<div className={styles["question-title"]}>
 					<span className={classnames(fontStyles["fa"],fontStyles["fa-question-circle-o"],mainStyles["color82CCB0"],mainStyles["pdr5px"])}></span>
@@ -69,7 +69,7 @@ const QuestionDetail=(props)=>{
                     </div>
                </div>	
 			</div>
-		</div>
+		</Fragment>
 	)	
 }
 

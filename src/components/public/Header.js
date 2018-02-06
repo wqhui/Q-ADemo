@@ -1,4 +1,4 @@
-import React from "react";
+import React,{Fragment} from "react";
 
 import './header.less';
 import * as mainStyles from '../public/style.less';
@@ -6,7 +6,7 @@ import * as styles from './header.less';
 
 export default ()=>{
 	return (
-		<div>
+		<Fragment>
 			<div className={styles["head-area"]}>
 				<div className={styles["head-title"]}>
 					<h2 className={styles["title"]}>React问答</h2>
@@ -15,7 +15,7 @@ export default ()=>{
 			<div className={styles["head-area-dispaly"]}>
 				
 			</div>	
-		</div>
+		</Fragment>
 	)
 
 }
