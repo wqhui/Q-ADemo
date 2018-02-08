@@ -7,9 +7,7 @@ import {Provider} from 'react-redux';
 import Question from './Question.js'
 import store from './Store.js';
 
- 
 ReactDom.render(
-
 	<Provider store={store}>
 		<Question getState={store.getState}></Question>
 	</Provider>,
