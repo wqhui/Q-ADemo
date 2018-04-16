@@ -15,13 +15,6 @@ class QuestionAdd extends React.Component {
 
 	constructor(props){
 		super(props);
-		this.showAddQuestion=this.showAddQuestion.bind(this);
-		this.hideAddQuestion=this.hideAddQuestion.bind(this);
-		this.submitQuestion=this.submitQuestion.bind(this);		
-		this.titleChange=this.titleChange.bind(this);
-		this.substanceChange=this.substanceChange.bind(this);
-
-
 
 	  	this.state = {
 	  	  value:Map({
@@ -37,8 +30,9 @@ class QuestionAdd extends React.Component {
 		return !is(this.state,nextState);
 	}
 
+
 	//显示提交问题
-	showAddQuestion(){
+	showAddQuestion=()=>{
 		const {value}=this.state;
 		this.setState({
 			value:value.update("hideQuestion",pd=>!pd)
@@ -46,7 +40,7 @@ class QuestionAdd extends React.Component {
 	}
 
 	//隐藏提交问题
-	hideAddQuestion(){
+	hideAddQuestion=()=>{
 
 		this.setState({
 			value:Map({
@@ -60,7 +54,7 @@ class QuestionAdd extends React.Component {
 
 
 	//提交问题
-	submitQuestion(ev){
+	submitQuestion=(ev)=>{
 		ev.preventDefault();//阻止默认的提交
 		const {value}=this.state;
 		const title=this.state.value.get("title");
@@ -81,7 +75,7 @@ class QuestionAdd extends React.Component {
 	}
 
 	//标题改变
-	titleChange(event){
+	titleChange=(event)=>{
 		const {value}=this.state;
 		this.setState({
 			value: value.update("title",val=>event.target.value)
@@ -89,7 +83,7 @@ class QuestionAdd extends React.Component {
 	}
 
 	//内容改变
-	substanceChange(event){
+	substanceChange=(event)=>{
 		const {value}=this.state;
 		this.setState({
 			value: value.update("substance",val=>event.target.value)

@@ -20,8 +20,7 @@ class AnswerAdd extends React.Component{
 
 	constructor(props){
 		super(props);
-		this.submitAmswer=this.submitAmswer.bind(this);
-		this.answerChange=this.answerChange.bind(this);
+
 		this.state={	
 			answer:''
 		}
@@ -33,14 +32,14 @@ class AnswerAdd extends React.Component{
 	}
 
 	//答案改变
-    answerChange(ev){
+    answerChange=(ev)=>{
     	this.setState({
     		answer:ev.target.value
     	})
     }
 
     //添加新答案
-    submitAmswer(ev){
+    submitAmswer=(ev)=>{
     	ev.preventDefault();//阻止默认提交
         const {pid}=this.props;
     	let answer=this.state.answer;   	 	
