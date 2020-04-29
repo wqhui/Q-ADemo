@@ -1,4 +1,4 @@
-### react评论回复demo
+### react论坛问答demo（react+redux）
 
 react的一个小例子，实现了添加问题以及描述、对问题进行赞或踩、能对问题进行答复，排序等功能。用webpack搭的环境，react功能用到了redux、中间件、动画、路由（按需加载），其他用到了less和immutable。
 
